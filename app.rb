@@ -58,11 +58,25 @@ get '/posts/new' do
     erb:'posts/new'
 end
 
+#CRUD -Read
+#variable routing
+#을 통해서 특정한 게시글을 가져온다
+
+
 get '/posts/create' do
     @title=params[:title]
     @body=params[:body]
+ 
     Post.create(title: @title, body: @body)
 
     erb:'posts/create'
+end
+
+get '/posts/:id' do
+    #게시글 아이드를 받아서,
+    @id = params[:id]
+      #db에서 찾는다
+    @post=Post.get(@id)
+    erb :'posts/show'
 end
 

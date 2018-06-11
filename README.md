@@ -153,3 +153,22 @@ Post.get(1).destroy
 ////////////////
 simbol은 불변!
 같은 스트링이더라도, simbol이 아니면 다른값가짐.
+///////////////
+
+
+/////////////시작페이지 만들기 라우팅 설정 및 대응되는 뷰
+
+
+/////params
+1.variable routing: 
+app.rd에서 
+get 'hello/:name'
+@name=params[:name]
+erb:name
+end
+
+2.form tag 이용하여 받는법
+html 문서에서 
+<form action="//">
+제목:<input name="title">
+<action>
