@@ -1,9 +1,17 @@
-
+<div class="container mt-5 text-center">
         <h1>게시판입니다</h1>
         <a href="/">홈으로</a>
+        
         <form action="/posts/create">
-            title:<input type="text" name="title">
-            content:<input type="text" name="body">
-            <input type="submit">
-        </form>
-  
+  <div class="form-group">
+    <label for="exampleInputEmail1">제목</label>
+    <input type="text" class="form-control" id="title" aria-describedby="emailHelp" placeholder="제목입력해줭">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">내용</label>
+    <input type="text" class="form-control" id="body" placeholder="내용입력해줭">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+  </div>
