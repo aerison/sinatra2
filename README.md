@@ -148,3 +148,8 @@ p.save
 
 -D
 Post.get(1).destroy
+
+
+////////////////
+simbol은 불변!
+같은 스트링이더라도, simbol이 아니면 다른값가짐.

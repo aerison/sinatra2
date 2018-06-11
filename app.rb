@@ -47,7 +47,8 @@ end
 
 #게시글을 모두 보여주는 곳
 get '/posts' do
-    @posts=Post.all
+    @posts=Post.all.reverse
+    #@posts=Post.all(:order=>[:id.desc])
     erb :'posts/posts'
 end
 
@@ -61,6 +62,7 @@ get '/posts/create' do
     @title=params[:title]
     @body=params[:body]
     Post.create(title: @title, body: @body)
+
     erb:'posts/create'
 end
 
